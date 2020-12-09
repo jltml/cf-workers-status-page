@@ -1,7 +1,7 @@
 settings:
-  title: 'Status Page'
+  title: 'jltml.me status'
   url: 'https://status-page.eidam.dev' # used for Slack messages
-  logo: logo-192x192.png # image in ./public/ folder
+  logo: lemniscate-icon.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: false # experimental feature, enable only for <5 monitors or on paid plans
 
@@ -22,6 +22,14 @@ monitors:
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
+
+  - id: jltml-blog
+    name: jltml.me/blog
+    description: 'The page that has my blog on it. Pretty self-explanatory.'
+    url: 'https://jltml.me/blog'
+    method: GET
+    expectStatus: 200
+    followRedirect: false
 
   - id: jltml-commento
     name: commento.jltml.me
