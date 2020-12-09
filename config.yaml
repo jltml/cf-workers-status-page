@@ -15,23 +15,18 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: workers-cloudflare-com # unique identifier
-    name: workers.cloudflare.com
-    description: 'You write code. They handle the rest.' # default=empty
-    url: 'https://workers.cloudflare.com/' # URL to fetch
+  - id: jltml-me # unique identifier
+    name: jltml.me
+    description: 'The homepage: https://jltml.me' # default=empty
+    url: 'https://jltml.me/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
 
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+  - id: jltml-commento
+    name: commento.jltml.me
+    description: 'The subdomain that hosts Commento (comments) on Heroku. For some reason, it redirects to https://jltml-commento.herokuapp.com, but it works, so meh. This should show downtime if HTTPS/SSL fails.'
+    url: 'https://commento.jltml.me'
     method: GET
     expectStatus: 200
-
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
-    method: GET
-    expectStatus: 200
+    followRedirect: true
