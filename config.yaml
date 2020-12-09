@@ -17,7 +17,7 @@ settings:
 monitors:
   - id: jltml-me # unique identifier
     name: jltml.me
-    description: 'The homepage: https://jltml.me' # default=empty
+    description: 'The homepage: https://jltml.me/' # default=empty
     url: 'https://jltml.me/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
@@ -26,7 +26,7 @@ monitors:
   - id: jltml-blog
     name: jltml.me/blog
     description: 'The page that has my blog on it. Pretty self-explanatory.'
-    url: 'https://jltml.me/blog'
+    url: 'https://jltml.me/blog/'
     method: GET
     expectStatus: 200
     followRedirect: false
@@ -34,7 +34,7 @@ monitors:
   - id: jltml-commento
     name: commento.jltml.me
     description: 'The subdomain that hosts Commento (comments) on Heroku. For some reason, it redirects to https://jltml-commento.herokuapp.com, but it works, so meh. This should show downtime if HTTPS/SSL fails.'
-    url: 'https://commento.jltml.me'
+    url: 'https://commento.jltml.me/'
     method: GET
     expectStatus: 200
     followRedirect: true
