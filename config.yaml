@@ -29,7 +29,7 @@ monitors:
     url: 'https://jltml.me/blog/'
     method: GET
     expectStatus: 200
-    followRedirect: false
+    followRedirect: true
 
   - id: jltml-commento
     name: commento.jltml.me
